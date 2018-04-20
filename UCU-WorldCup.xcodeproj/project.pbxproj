@@ -12,6 +12,12 @@
 		8CCD66662089617000A4D8CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CCD66642089617000A4D8CC /* Main.storyboard */; };
 		8CCD66682089617000A4D8CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CCD66672089617000A4D8CC /* Assets.xcassets */; };
 		8CCD666B2089617000A4D8CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CCD66692089617000A4D8CC /* LaunchScreen.storyboard */; };
+		8CCD66732089754C00A4D8CC /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCD66722089754C00A4D8CC /* Match.swift */; };
+		8CCD6679208975C100A4D8CC /* Stadium.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCD6678208975C100A4D8CC /* Stadium.swift */; };
+		8CCD667B208975D300A4D8CC /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCD667A208975D300A4D8CC /* Player.swift */; };
+		8CCD667D208975E100A4D8CC /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCD667C208975E100A4D8CC /* Team.swift */; };
+		8CCD667F2089762400A4D8CC /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCD667E2089762400A4D8CC /* Event.swift */; };
+		8CCD6681208976DE00A4D8CC /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCD6680208976DE00A4D8CC /* Person.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +28,12 @@
 		8CCD66672089617000A4D8CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8CCD666A2089617000A4D8CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8CCD666C2089617000A4D8CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8CCD66722089754C00A4D8CC /* Match.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
+		8CCD6678208975C100A4D8CC /* Stadium.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stadium.swift; sourceTree = "<group>"; };
+		8CCD667A208975D300A4D8CC /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		8CCD667C208975E100A4D8CC /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		8CCD667E2089762400A4D8CC /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		8CCD6680208976DE00A4D8CC /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +66,44 @@
 		8CCD665F2089617000A4D8CC /* UCU-WorldCup */ = {
 			isa = PBXGroup;
 			children = (
+				8CCD66772089758400A4D8CC /* Controller */,
+				8CCD66752089757000A4D8CC /* View */,
+				8CCD66742089755D00A4D8CC /* Model */,
 				8CCD66602089617000A4D8CC /* AppDelegate.swift */,
-				8CCD66622089617000A4D8CC /* MatchesViewController.swift */,
 				8CCD66642089617000A4D8CC /* Main.storyboard */,
 				8CCD66672089617000A4D8CC /* Assets.xcassets */,
 				8CCD66692089617000A4D8CC /* LaunchScreen.storyboard */,
 				8CCD666C2089617000A4D8CC /* Info.plist */,
 			);
 			path = "UCU-WorldCup";
+			sourceTree = "<group>";
+		};
+		8CCD66742089755D00A4D8CC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8CCD66722089754C00A4D8CC /* Match.swift */,
+				8CCD6678208975C100A4D8CC /* Stadium.swift */,
+				8CCD667A208975D300A4D8CC /* Player.swift */,
+				8CCD667C208975E100A4D8CC /* Team.swift */,
+				8CCD667E2089762400A4D8CC /* Event.swift */,
+				8CCD6680208976DE00A4D8CC /* Person.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8CCD66752089757000A4D8CC /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8CCD66772089758400A4D8CC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8CCD66622089617000A4D8CC /* MatchesViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,8 +178,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CCD667D208975E100A4D8CC /* Team.swift in Sources */,
 				8CCD66632089617000A4D8CC /* MatchesViewController.swift in Sources */,
 				8CCD66612089617000A4D8CC /* AppDelegate.swift in Sources */,
+				8CCD66732089754C00A4D8CC /* Match.swift in Sources */,
+				8CCD667B208975D300A4D8CC /* Player.swift in Sources */,
+				8CCD667F2089762400A4D8CC /* Event.swift in Sources */,
+				8CCD6681208976DE00A4D8CC /* Person.swift in Sources */,
+				8CCD6679208975C100A4D8CC /* Stadium.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
