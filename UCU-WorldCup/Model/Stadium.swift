@@ -7,5 +7,11 @@
 //
 
 import Foundation
+import UIKit
 
-class Stadium{}
+class Stadium{
+    
+    var name = ""
+    var photo:UIImage!
+    
+}

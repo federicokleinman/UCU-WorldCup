@@ -7,5 +7,13 @@
 //
 
 import Foundation
+import UIKit
 
-class Team{}
+class Team{
+    
+    var name = ""
+    var emblem: UIImage!
+    //var player: Player!
+    var group = ""
+    
+}

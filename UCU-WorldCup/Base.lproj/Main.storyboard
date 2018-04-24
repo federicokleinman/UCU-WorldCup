@@ -11,10 +11,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--UCU Wolrd Cup-->
+        <!--MatchesViewController-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UCU_WorldCup" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="MatchesViewController" id="BYZ-38-t0r" customClass="MatchesViewController" customModule="UCU_WorldCup" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -43,7 +43,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="UCU Wolrd Cup" id="Vs4-6c-6s6">
+                    <navigationItem key="navigationItem" title="UCU World Cup" id="Vs4-6c-6s6">
                         <barButtonItem key="backBarButtonItem" title="Back" id="PBF-Tz-RB0"/>
                     </navigationItem>
                     <connections>
@@ -54,10 +54,10 @@
             </objects>
             <point key="canvasLocation" x="1076" y="133.5832083958021"/>
         </scene>
-        <!--View Controller-->
+        <!--InformationMatchViewController-->
         <scene sceneID="fm0-6W-f7z">
             <objects>
-                <viewController id="jg1-sE-Vuf" sceneMemberID="viewController">
+                <viewController title="InformationMatchViewController" id="jg1-sE-Vuf" customClass="InformationMatchViewController" customModule="UCU_WorldCup" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2j9-bn-0BU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -68,7 +68,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2Mf-X6-jhT">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ekaterimburgo-Arena" translatesAutoresizingMaskIntoConstraints="NO" id="2Mf-X6-jhT">
                                 <rect key="frame" x="0.0" y="114.5" width="375" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="2Mf-X6-jhT" secondAttribute="height" multiplier="375:128" id="l7k-az-jwM"/>
@@ -86,7 +86,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lrp-we-pRh">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="vs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lrp-we-pRh">
                                 <rect key="frame" x="166" y="291" width="42" height="72"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -160,8 +160,19 @@
                             <constraint firstItem="2Mf-X6-jhT" firstAttribute="leading" secondItem="EYW-IP-yWQ" secondAttribute="leading" id="xkS-xL-a0X"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="EYW-IP-yWQ"/>
+                        <connections>
+                            <outlet property="photo" destination="2Mf-X6-jhT" id="Lbg-uG-Tgp"/>
+                        </connections>
                     </view>
                     <connections>
+                        <outlet property="dateTimeMatch" destination="DlH-su-gwa" id="5PD-I0-U4c"/>
+                        <outlet property="matchSelection" destination="Qme-7G-PrG" id="kkd-88-cV9"/>
+                        <outlet property="stadiumName" destination="l3K-dw-iIl" id="xDo-a2-ezO"/>
+                        <outlet property="stadiumPhoto" destination="2Mf-X6-jhT" id="6tW-hY-8X5"/>
+                        <outlet property="teamEmblemOne" destination="Imo-kE-Pav" id="HDb-Lg-EKF"/>
+                        <outlet property="teamEmblemTwo" destination="dkt-Hy-Lax" id="lbD-YY-wZE"/>
+                        <outlet property="teamNameOne" destination="WrR-Qt-3hk" id="Q4X-V9-7zf"/>
+                        <outlet property="teamNameTwo" destination="mYh-eF-w3Z" id="Hh1-ES-pl5"/>
                         <segue destination="R36-6t-juE" kind="show" id="oC8-7G-Cex"/>
                     </connections>
                 </viewController>
@@ -169,10 +180,10 @@
             </objects>
             <point key="canvasLocation" x="1879" y="113"/>
         </scene>
-        <!--View Controller-->
+        <!--TeamViewController-->
         <scene sceneID="7bL-v4-wy5">
             <objects>
-                <viewController id="R36-6t-juE" sceneMemberID="viewController">
+                <viewController title="TeamViewController" id="R36-6t-juE" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aVJ-yB-Acy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -267,4 +278,7 @@
             <point key="canvasLocation" x="209" y="134"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Ekaterimburgo-Arena" width="514" height="248"/>
+    </resources>
 </document>

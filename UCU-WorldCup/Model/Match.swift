@@ -8,4 +8,13 @@
 
 import Foundation
 
-class Match {}
+class Match {
+    
+    var nameTeam1: Team!
+    var nameTeam2: Team!
+    var stadium: Stadium!
+    var event: Event!
+    var dateHour: Date!
+    
+    
+}
