@@ -12,6 +12,8 @@ class MatchesViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     
     @IBOutlet weak var matchesTable: UITableView!
+    let nameTeam = ["Uruguay","Rusia","Egipto","Arabia Saudita" ]
+    let emblemTeam = ["/Applications/App Xcode/UCU-WorldCup/UCU-WorldCup/Assets.xcassets/emblem/uruguay.imageset/uruguay.gif","/Applications/App Xcode/UCU-WorldCup/UCU-WorldCup/Assets.xcassets/emblem/rusia.imageset/rusia.gif","/Applications/App Xcode/UCU-WorldCup/UCU-WorldCup/Assets.xcassets/emblem/egipto.imageset/egipto.gif","/Applications/App Xcode/UCU-WorldCup/UCU-WorldCup/Assets.xcassets/emblem/arabia saudita.imageset/arabia saudita.gif"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,7 +43,10 @@ class MatchesViewController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.matchesTable.dequeueReusableCell(withIdentifier: "matchIdentifier") as! ListMatchTableViewCell!
         
-        cell!.nameTeam1.text = "Uruguay"
+        cell!.nameTeam1.text = nameTeam[indexPath.row]
+        cell!.emblemTeam1?.image = UIImage(named: emblemTeam[indexPath.row])
+        cell!.nameTeam2.text = nameTeam[indexPath.row+1]
+        cell!.emblemTeam2?.image = UIImage(named: emblemTeam[indexPath.row+1])
         return cell!
     }
  

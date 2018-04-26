@@ -12,6 +12,8 @@ class ListMatchTableViewCell: UITableViewCell {
 
     @IBOutlet weak var nameTeam1: UILabel!
     @IBOutlet weak var nameTeam2: UILabel!
+    @IBOutlet weak var emblemTeam1: UIImageView!
+    @IBOutlet weak var emblemTeam2: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

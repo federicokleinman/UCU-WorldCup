@@ -31,7 +31,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ar6-6j-exY">
-                                                    <rect key="frame" x="123" y="111" width="42" height="21"/>
+                                                    <rect key="frame" x="123" y="130" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -82,17 +82,19 @@
                                                 <constraint firstItem="zBE-rG-xjc" firstAttribute="top" secondItem="ZZx-3X-1hg" secondAttribute="top" constant="5" id="Ixw-rw-4w1"/>
                                                 <constraint firstItem="ZhB-Kj-Kvy" firstAttribute="leading" secondItem="ZZx-3X-1hg" secondAttribute="leading" constant="10" id="Qg4-7O-ZhV"/>
                                                 <constraint firstItem="Ar6-6j-exY" firstAttribute="leading" secondItem="ZhB-Kj-Kvy" secondAttribute="trailing" constant="5" id="ThK-KR-w1b"/>
+                                                <constraint firstItem="Ar6-6j-exY" firstAttribute="top" secondItem="ZZx-3X-1hg" secondAttribute="top" constant="130" id="XPb-GL-xaL"/>
                                                 <constraint firstAttribute="bottom" secondItem="677-jZ-V4X" secondAttribute="bottom" constant="30" id="YrD-9r-SVq"/>
                                                 <constraint firstItem="ZhB-Kj-Kvy" firstAttribute="top" secondItem="ZZx-3X-1hg" secondAttribute="top" constant="40" id="bQ3-cb-CtJ"/>
                                                 <constraint firstItem="zBE-rG-xjc" firstAttribute="centerX" secondItem="ZZx-3X-1hg" secondAttribute="centerX" id="cqJ-9y-ggU"/>
                                                 <constraint firstItem="FAT-7o-hjp" firstAttribute="top" secondItem="h6m-e8-bqM" secondAttribute="bottom" constant="3" id="fU3-Ty-OHf"/>
                                                 <constraint firstItem="h6m-e8-bqM" firstAttribute="centerX" secondItem="ZZx-3X-1hg" secondAttribute="centerX" id="qIl-7B-cM6"/>
-                                                <constraint firstItem="Ar6-6j-exY" firstAttribute="top" secondItem="FAT-7o-hjp" secondAttribute="bottom" constant="60" id="tSM-Ux-rVx"/>
                                                 <constraint firstItem="FAT-7o-hjp" firstAttribute="centerX" secondItem="ZZx-3X-1hg" secondAttribute="centerX" id="u7s-43-Xir"/>
                                                 <constraint firstAttribute="bottom" secondItem="WWX-vN-Ubw" secondAttribute="bottom" constant="30" id="zWR-td-wKX"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="emblemTeam1" destination="ZhB-Kj-Kvy" id="rXx-03-6BT"/>
+                                            <outlet property="emblemTeam2" destination="677-jZ-V4X" id="1rI-mI-Rwp"/>
                                             <outlet property="nameTeam1" destination="Ar6-6j-exY" id="f1S-pd-zt1"/>
                                             <outlet property="nameTeam2" destination="WWX-vN-Ubw" id="KrV-4u-a7e"/>
                                         </connections>
