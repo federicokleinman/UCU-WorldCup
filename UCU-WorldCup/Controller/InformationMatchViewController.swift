@@ -19,6 +19,8 @@ class InformationMatchViewController: UIViewController {
     var teamEmblemTwoSelection: UIImage!
     var teamNameTwoSelection: String!
     
+    
+    
     @IBOutlet weak var matchName: UILabel!
     @IBOutlet weak var stadiumPhoto: UIImageView!
     @IBOutlet weak var stadiumName: UILabel!

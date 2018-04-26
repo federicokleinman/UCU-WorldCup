@@ -10,8 +10,8 @@ import Foundation
 
 class Player: Person{
     
-    var person: Person!
-    var number: Int!
+    var person = Person()
+    var number = 0
     var team = ""
     
 }

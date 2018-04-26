@@ -8,11 +8,18 @@
 
 import UIKit
 
-class MatchesViewController: UIViewController {
-
+class MatchesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    
+    @IBOutlet weak var matchesTable: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        matchesTable.delegate = self
+        matchesTable.dataSource = self
+        matchesTable.reloadData()
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,6 +33,18 @@ class MatchesViewController: UIViewController {
         // Pass the selected object to the new view controller.
         
     }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = self.matchesTable.dequeueReusableCell(withIdentifier: "matchIdentifier") as! ListMatchTableViewCell!
+        
+        cell!.nameTeam1.text = "Uruguay"
+        return cell!
+    }
+ 
     
 }
 

@@ -10,5 +10,9 @@ import Foundation
 
 class Event{
     
+    var type = ""  //tipo de evento gol, falta, amarilla
+    var minute = 0 //minuto que ocurre el evento (accion)
+    var description = ""
+    
 }
 
