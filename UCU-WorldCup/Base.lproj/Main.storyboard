@@ -116,7 +116,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="matchesTable" destination="2j4-3B-qAa" id="Qfi-jN-rmb"/>
-                        <segue destination="jg1-sE-Vuf" kind="show" id="d7p-ar-73z"/>
+                        <segue destination="jg1-sE-Vuf" kind="show" identifier="showMatch" id="d7p-ar-73z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -229,13 +229,9 @@
                             <constraint firstItem="2Mf-X6-jhT" firstAttribute="leading" secondItem="EYW-IP-yWQ" secondAttribute="leading" id="xkS-xL-a0X"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="EYW-IP-yWQ"/>
-                        <connections>
-                            <outlet property="photo" destination="2Mf-X6-jhT" id="Lbg-uG-Tgp"/>
-                        </connections>
                     </view>
                     <connections>
                         <outlet property="dateTimeMatch" destination="DlH-su-gwa" id="5PD-I0-U4c"/>
-                        <outlet property="matchSelection" destination="Qme-7G-PrG" id="kkd-88-cV9"/>
                         <outlet property="stadiumName" destination="l3K-dw-iIl" id="xDo-a2-ezO"/>
                         <outlet property="stadiumPhoto" destination="2Mf-X6-jhT" id="6tW-hY-8X5"/>
                         <outlet property="teamEmblemOne" destination="Imo-kE-Pav" id="HDb-Lg-EKF"/>

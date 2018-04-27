@@ -13,7 +13,7 @@ class MatchesViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     @IBOutlet weak var matchesTable: UITableView!
     let nameTeam = ["Uruguay","Rusia","Egipto","Arabia Saudita" ]
-    let emblemTeam = ["/Applications/App Xcode/UCU-WorldCup/UCU-WorldCup/Assets.xcassets/emblem/uruguay.imageset/uruguay.gif","/Applications/App Xcode/UCU-WorldCup/UCU-WorldCup/Assets.xcassets/emblem/rusia.imageset/rusia.gif","/Applications/App Xcode/UCU-WorldCup/UCU-WorldCup/Assets.xcassets/emblem/egipto.imageset/egipto.gif","/Applications/App Xcode/UCU-WorldCup/UCU-WorldCup/Assets.xcassets/emblem/arabia saudita.imageset/arabia saudita.gif"]
+    let emblemTeam = ["uruguay","rusia","egipto","arabia saudita"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +33,10 @@ class MatchesViewController: UIViewController, UITableViewDelegate, UITableViewD
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if let informationMatch = segue.destination as? InformationMatchViewController {
+            informationMatch.teamNameOneSelection = "uruguay"
+        }
+        
         
     }
     
@@ -50,6 +54,8 @@ class MatchesViewController: UIViewController, UITableViewDelegate, UITableViewD
         return cell!
     }
  
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "showMatch", sender: nil)
+    }
 }
 

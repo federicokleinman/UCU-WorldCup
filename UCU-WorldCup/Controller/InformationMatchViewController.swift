@@ -11,13 +11,13 @@ import UIKit
 class InformationMatchViewController: UIViewController {
     
     
-    var matchSelection: String!
-    var stadiumPhotoSelection: UIImage!
-    var stadiumNameSelection: String!
-    var teamEmblemOneSelection: UIImage!
-    var teamNameOneSelection: String!
-    var teamEmblemTwoSelection: UIImage!
-    var teamNameTwoSelection: String!
+    var matchSelection: String?
+    var stadiumPhotoSelection: UIImage?
+    var stadiumNameSelection: String?
+    var teamEmblemOneSelection: UIImage?
+    var teamNameOneSelection: String?
+    var teamEmblemTwoSelection: UIImage?
+    var teamNameTwoSelection: String?
     
     
     
