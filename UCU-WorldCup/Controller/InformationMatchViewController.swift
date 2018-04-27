@@ -43,6 +43,7 @@ class InformationMatchViewController: UIViewController {
         super.viewDidLoad()
         
         //Hay que conectar el matchName a un outlet
+        //Cambio
         //matchName.text = matchSelection
         
         stadiumPhoto.image = UIImage(named: stadiumPhotoSelection)
