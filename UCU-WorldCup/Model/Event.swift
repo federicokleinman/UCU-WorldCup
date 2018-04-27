@@ -14,5 +14,11 @@ class Event{
     var minute = 0 //minuto que ocurre el evento (accion)
     var description = ""
     
+    init(type: String, minute: Int, description: String){
+        self.type = type
+        self.minute = minute
+        self.description = description
+    }
+    
 }
 

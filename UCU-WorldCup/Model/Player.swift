@@ -8,11 +8,13 @@
 
 import Foundation
 
-class Player: Person{
-    
-    var person = Person()
+class Player{
     var number = 0
     var team = ""
     
+    init(number: Int, team: String ){
+        self.number = number
+        self.team = team
+    }
     
 }

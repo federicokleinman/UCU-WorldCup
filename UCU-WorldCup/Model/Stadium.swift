@@ -14,4 +14,9 @@ class Stadium{
     var name = ""
     var photo = ""
     
+    init(name: String, photo: String){
+        self.name = name
+        self.photo = photo
+    }
+    
 }

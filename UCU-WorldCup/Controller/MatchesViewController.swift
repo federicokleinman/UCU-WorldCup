@@ -34,7 +34,18 @@ class MatchesViewController: UIViewController, UITableViewDelegate, UITableViewD
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         if let informationMatch = segue.destination as? InformationMatchViewController {
-            informationMatch.teamNameOneSelection = "uruguay"
+            
+            //TODO: Aca tengo que pasar de una el objeto Match
+            //Atributos de Equipos
+            informationMatch.teamOneNameSelection = "Uruguay"
+            informationMatch.teamTwoNameSelection = "Egipto"
+            informationMatch.teamOneEmblemSelection = "uruguay"
+            informationMatch.teamTwoEmblemSelection = "eqipto"
+            
+            informationMatch.matchSelection = "Prueba"
+            informationMatch.stadiumPhotoSelection = "Prueba"
+            informationMatch.stadiumNameSelection = "Prueba"
+            
         }
         
         

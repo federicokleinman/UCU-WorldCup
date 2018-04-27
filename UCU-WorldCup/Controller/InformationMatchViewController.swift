@@ -10,14 +10,22 @@ import UIKit
 
 class InformationMatchViewController: UIViewController {
     
+    //TODO: En un futuro esto tiene que pasarle el match no cada cosa por separada
     
+    //Match attributes
     var matchSelection: String?
-    var stadiumPhotoSelection: UIImage?
+    
+    //Stadium attributes
+    var stadiumPhotoSelection: String!
     var stadiumNameSelection: String?
-    var teamEmblemOneSelection: UIImage?
-    var teamNameOneSelection: String?
-    var teamEmblemTwoSelection: UIImage?
-    var teamNameTwoSelection: String?
+    
+    //Team One attributes
+    var teamOneEmblemSelection: String! //esta es la ruta a la imagen en assets
+    var teamOneNameSelection: String?
+    
+    //Team Two attributes
+    var teamTwoEmblemSelection: String! //esta es la ruta a la imagen en assets
+    var teamTwoNameSelection: String?
     
     
     
@@ -34,13 +42,17 @@ class InformationMatchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        matchName.text = matchSelection
-        stadiumPhoto.image = stadiumPhotoSelection
+        //Hay que conectar el matchName a un outlet
+        //matchName.text = matchSelection
+        
+        stadiumPhoto.image = UIImage(named: stadiumPhotoSelection)
         stadiumName.text = stadiumNameSelection
-        teamEmblemOne.image = teamEmblemOneSelection
-        teamNameOne.text = teamNameOneSelection
-        teamEmblemTwo.image = teamEmblemTwoSelection
-        teamNameTwo.text = teamNameTwoSelection
+        
+        teamEmblemOne.image = UIImage(named: teamOneEmblemSelection)
+        teamNameOne.text = teamOneNameSelection
+        
+        teamEmblemTwo.image = UIImage(named: teamTwoEmblemSelection)
+        teamNameTwo.text = teamTwoNameSelection
         
         
         

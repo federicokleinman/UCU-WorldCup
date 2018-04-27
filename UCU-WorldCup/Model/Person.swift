@@ -13,4 +13,8 @@ class Person {
     var name = ""
     var lastName = ""
     
+    init(name: String, lastName: String){
+        self.name = name
+        self.lastName = lastName
+    }
 }

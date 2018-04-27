@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ugq-uv-RdH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ugq-uv-RdH">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -123,10 +123,10 @@
             </objects>
             <point key="canvasLocation" x="1076" y="133.5832083958021"/>
         </scene>
-        <!--InformationMatchViewController-->
+        <!--Match Information-->
         <scene sceneID="fm0-6W-f7z">
             <objects>
-                <viewController title="InformationMatchViewController" id="jg1-sE-Vuf" customClass="InformationMatchViewController" customModule="UCU_WorldCup" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Match Information" id="jg1-sE-Vuf" customClass="InformationMatchViewController" customModule="UCU_WorldCup" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2j9-bn-0BU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -245,10 +245,10 @@
             </objects>
             <point key="canvasLocation" x="1879" y="113"/>
         </scene>
-        <!--TeamViewController-->
+        <!--Team Information-->
         <scene sceneID="7bL-v4-wy5">
             <objects>
-                <viewController title="TeamViewController" id="R36-6t-juE" sceneMemberID="viewController">
+                <viewController title="Team Information" id="R36-6t-juE" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aVJ-yB-Acy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
