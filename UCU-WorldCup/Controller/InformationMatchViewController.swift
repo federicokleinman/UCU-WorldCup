@@ -13,21 +13,9 @@ class InformationMatchViewController: UIViewController {
     //TODO: En un futuro esto tiene que pasarle el match no cada cosa por separada
     
     //Match attributes
-    var matchSelection: String?
+    var matchSelected: Match!
     
-    //Stadium attributes
-    var stadiumPhotoSelection: String!
-    var stadiumNameSelection: String?
-    
-    //Team One attributes
-    var teamOneEmblemSelection: String! //esta es la ruta a la imagen en assets
-    var teamOneNameSelection: String?
-    
-    //Team Two attributes
-    var teamTwoEmblemSelection: String! //esta es la ruta a la imagen en assets
-    var teamTwoNameSelection: String?
-    
-    
+   
     
     @IBOutlet weak var matchName: UILabel!
     @IBOutlet weak var stadiumPhoto: UIImageView!
@@ -46,14 +34,23 @@ class InformationMatchViewController: UIViewController {
         //Cambio
         //matchName.text = matchSelection
         
-        stadiumPhoto.image = UIImage(named: stadiumPhotoSelection)
-        stadiumName.text = stadiumNameSelection
+        stadiumPhoto.image = UIImage(named: matchSelected.stadium.photo)
+        stadiumName.text = matchSelected.stadium.name
         
-        teamEmblemOne.image = UIImage(named: teamOneEmblemSelection)
-        teamNameOne.text = teamOneNameSelection
+        teamEmblemOne.image = UIImage(named: matchSelected.team1.emblem)
+        teamNameOne.text = matchSelected.team1.name
         
-        teamEmblemTwo.image = UIImage(named: teamTwoEmblemSelection)
-        teamNameTwo.text = teamTwoNameSelection
+        teamEmblemTwo.image = UIImage(named: matchSelected.team2.emblem)
+        teamNameTwo.text = matchSelected.team2.name
+        
+        let dayNumber = 20
+        let example = "\(dayNumber) de -"
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd.MM.yyyy"
+        let result = formatter.string(from: matchSelected.dateHour)
+        
+        dateTimeMatch.text = result
         
         
         

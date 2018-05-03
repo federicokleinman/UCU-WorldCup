@@ -9,12 +9,28 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "UCU-WorldCup/Controller/InformationMatchViewController.swift"
-            timestampString = "546019406.448463"
+            filePath = "UCU-WorldCup/Controller/MatchesViewController.swift"
+            timestampString = "547003749.708093"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
+            startingLineNumber = "9"
+            endingLineNumber = "9"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UCU-WorldCup/Controller/InformationMatchViewController.swift"
+            timestampString = "547003749.710227"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
             landmarkName = "InformationMatchViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -26,13 +42,29 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "UCU-WorldCup/Controller/MatchesViewController.swift"
-            timestampString = "546019691.016095"
+            timestampString = "547003749.710377"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "9"
-            endingLineNumber = "9"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            startingLineNumber = "95"
+            endingLineNumber = "95"
+            landmarkName = "tableView(_:didSelectRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UCU-WorldCup/Controller/InformationMatchViewController.swift"
+            timestampString = "547003749.711838"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

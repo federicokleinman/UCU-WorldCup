@@ -12,14 +12,44 @@ class MatchesViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     
     @IBOutlet weak var matchesTable: UITableView!
-    let nameTeam = ["Uruguay","Rusia","Egipto","Arabia Saudita" ]
-    let emblemTeam = ["uruguay","rusia","egipto","arabia saudita"]
+    
+    var listPlayers: [Player] = []
+    var listEvents: [Event] = []
+    //let nameTeam = ["Uruguay","Rusia","Egipto","Arabia Saudita" ]
+    //let emblemTeam = ["uruguay","rusia","egipto","arabia saudita"]
+    
+    var matchSelected: Match!
+    var matches: [Match] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         matchesTable.delegate = self
         matchesTable.dataSource = self
+        
+        //objetos de prueba
+        let player1 = Player(number: 9, team: "Uruguay")
+        listPlayers.append(player1)
+        var team1 = Team(name: "Uruguay", emblem: "uruguay", players: listPlayers)
+        let stadium = Stadium(name: "Samara Arena", photo: "Samara-Arena")
+        let date = Date()
+        
+        
+        let event1 = Event(type: "Comienzo Partido", minute: 0, description: "Pitido inicial")
+        listEvents.append(event1)
+        let event2 = Event(type: "Gol", minute: 3, description: "Suarez marca")
+        listEvents.append(event2)
+        let event3 = Event(type: "Comienzo Partido", minute: 0, description: "Pitido inicial")
+        listEvents.append(event3)
+        let event4 = Event(type: "Comienzo Partido", minute: 0, description: "Pitido inicial")
+        listEvents.append(event4)
+        
+        
+        let match1 = Match(team1: team1, team2: team1, stadium: stadium, date: date, group: "A", event: listEvents)
+        matches.append(match1)
+        
+        
+        
         matchesTable.reloadData()
 
     }
@@ -37,14 +67,8 @@ class MatchesViewController: UIViewController, UITableViewDelegate, UITableViewD
             
             //TODO: Aca tengo que pasar de una el objeto Match
             //Atributos de Equipos
-            informationMatch.teamOneNameSelection = "Uruguay"
-            informationMatch.teamTwoNameSelection = "Egipto"
-            informationMatch.teamOneEmblemSelection = "uruguay"
-            informationMatch.teamTwoEmblemSelection = "eqipto"
             
-            informationMatch.matchSelection = "Prueba"
-            informationMatch.stadiumPhotoSelection = "Prueba"
-            informationMatch.stadiumNameSelection = "Prueba"
+            informationMatch.matchSelected = matchSelected
             
         }
         
@@ -52,20 +76,23 @@ class MatchesViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return matches.count
     }
+    
+   
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.matchesTable.dequeueReusableCell(withIdentifier: "matchIdentifier") as! ListMatchTableViewCell!
-        
-        cell!.nameTeam1.text = nameTeam[indexPath.row]
-        cell!.emblemTeam1?.image = UIImage(named: emblemTeam[indexPath.row])
-        cell!.nameTeam2.text = nameTeam[indexPath.row+1]
-        cell!.emblemTeam2?.image = UIImage(named: emblemTeam[indexPath.row+1])
+        let match = matches[indexPath.row]
+        cell!.nameTeam1.text = match.team1.name
+        cell!.emblemTeam1?.image = UIImage(named: match.team1.emblem)
+        cell!.nameTeam2.text = match.team2.name
+        cell!.emblemTeam2?.image = UIImage(named: match.team2.emblem)
         return cell!
     }
  
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        matchSelected = matches[indexPath.row]
         performSegue(withIdentifier: "showMatch", sender: nil)
     }
 }
