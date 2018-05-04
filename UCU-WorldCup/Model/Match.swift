@@ -19,8 +19,7 @@ class Match {
     var event: [Event] = []
     var dateHour: Date
     var group: String
-    var goalsTeam1 = 0
-    var goalsTeam2 = 0
+    var result: (Int, Int)?
     
     init(team1: Team,team2: Team,stadium:Stadium,date: Date, group:String, event: [Event]){
         self.team1 = team1

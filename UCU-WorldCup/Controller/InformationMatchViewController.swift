@@ -14,7 +14,7 @@ class InformationMatchViewController: UIViewController {
     
     //Match attributes
     var matchSelected: Match!
-    
+    var teamSelected: Team!
    
     
     @IBOutlet weak var matchName: UILabel!
@@ -30,9 +30,7 @@ class InformationMatchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //Hay que conectar el matchName a un outlet
-        //Cambio
-        //matchName.text = matchSelection
+     
         
         stadiumPhoto.image = UIImage(named: matchSelected.stadium.photo)
         stadiumName.text = matchSelected.stadium.name
@@ -43,11 +41,12 @@ class InformationMatchViewController: UIViewController {
         teamEmblemTwo.image = UIImage(named: matchSelected.team2.emblem)
         teamNameTwo.text = matchSelected.team2.name
         
-        let dayNumber = 20
-        let example = "\(dayNumber) de -"
-        
         let formatter = DateFormatter()
-        formatter.dateFormat = "dd.MM.yyyy"
+        //let dayNumber = formatter.dateFormat = "dd.MM.yyyy"
+        
+        //let example = "\(dayNumber) de -"
+        
+        
         let result = formatter.string(from: matchSelected.dateHour)
         
         dateTimeMatch.text = result
@@ -60,18 +59,31 @@ class InformationMatchViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+   
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+      
+        if let teamSelect = segue.destination as? TeamViewController {
+            
+            teamSelect.teamSelected = teamSelected
+            
+        }
+        
     }
-    */
+    
+   
 
+    @IBAction func localAction(_ sender: Any) {
+        teamSelected = matchSelected.team1
+        print ("Local")
+        performSegue(withIdentifier: "showTeam", sender: nil)
+    }
+    @IBAction func awayAction(_ sender: Any) {
+        teamSelected = matchSelected.team2
+        print("Away")
+        performSegue(withIdentifier: "showTeam", sender: nil)
+        
+    }
+    
 }

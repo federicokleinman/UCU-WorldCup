@@ -28,7 +28,8 @@ class MatchesViewController: UIViewController, UITableViewDelegate, UITableViewD
         matchesTable.dataSource = self
         
         //objetos de prueba
-        let player1 = Player(number: 9, team: "Uruguay")
+        let player1 = Player(name:"Luis Suarez",number: 9, team: "Uruguay")
+        
         listPlayers.append(player1)
         var team1 = Team(name: "Uruguay", emblem: "uruguay", players: listPlayers)
         let stadium = Stadium(name: "Samara Arena", photo: "Samara-Arena")

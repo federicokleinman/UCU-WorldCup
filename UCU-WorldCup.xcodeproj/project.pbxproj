@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		3067F7DE2092940E001BB091 /* ListMatchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3067F7DD2092940E001BB091 /* ListMatchTableViewCell.swift */; };
 		30864693208B8B39003A43C4 /* InformationMatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30864692208B8B39003A43C4 /* InformationMatchViewController.swift */; };
+		30CF7DB8209BCEE10027809B /* TeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CF7DB7209BCEE10027809B /* TeamViewController.swift */; };
+		30F9168B209BDBC80036CDD6 /* ListPlayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9168A209BDBC80036CDD6 /* ListPlayerTableViewCell.swift */; };
+		30F9168F209BEFDF0036CDD6 /* NextMatchesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9168E209BEFDF0036CDD6 /* NextMatchesCollectionViewCell.swift */; };
 		8CCD66612089617000A4D8CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCD66602089617000A4D8CC /* AppDelegate.swift */; };
 		8CCD66632089617000A4D8CC /* MatchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCD66622089617000A4D8CC /* MatchesViewController.swift */; };
 		8CCD66662089617000A4D8CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CCD66642089617000A4D8CC /* Main.storyboard */; };
@@ -25,6 +28,9 @@
 /* Begin PBXFileReference section */
 		3067F7DD2092940E001BB091 /* ListMatchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListMatchTableViewCell.swift; sourceTree = "<group>"; };
 		30864692208B8B39003A43C4 /* InformationMatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationMatchViewController.swift; sourceTree = "<group>"; };
+		30CF7DB7209BCEE10027809B /* TeamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamViewController.swift; sourceTree = "<group>"; };
+		30F9168A209BDBC80036CDD6 /* ListPlayerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPlayerTableViewCell.swift; sourceTree = "<group>"; };
+		30F9168E209BEFDF0036CDD6 /* NextMatchesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextMatchesCollectionViewCell.swift; sourceTree = "<group>"; };
 		8CCD665D2089617000A4D8CC /* UCU-WorldCup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UCU-WorldCup.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CCD66602089617000A4D8CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8CCD66622089617000A4D8CC /* MatchesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +114,9 @@
 				3067F7DD2092940E001BB091 /* ListMatchTableViewCell.swift */,
 				8CCD66622089617000A4D8CC /* MatchesViewController.swift */,
 				30864692208B8B39003A43C4 /* InformationMatchViewController.swift */,
+				30CF7DB7209BCEE10027809B /* TeamViewController.swift */,
+				30F9168A209BDBC80036CDD6 /* ListPlayerTableViewCell.swift */,
+				30F9168E209BEFDF0036CDD6 /* NextMatchesCollectionViewCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -184,6 +193,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30F9168B209BDBC80036CDD6 /* ListPlayerTableViewCell.swift in Sources */,
 				8CCD667D208975E100A4D8CC /* Team.swift in Sources */,
 				8CCD66632089617000A4D8CC /* MatchesViewController.swift in Sources */,
 				30864693208B8B39003A43C4 /* InformationMatchViewController.swift in Sources */,
@@ -191,8 +201,10 @@
 				8CCD66732089754C00A4D8CC /* Match.swift in Sources */,
 				8CCD667B208975D300A4D8CC /* Player.swift in Sources */,
 				8CCD667F2089762400A4D8CC /* Event.swift in Sources */,
+				30F9168F209BEFDF0036CDD6 /* NextMatchesCollectionViewCell.swift in Sources */,
 				3067F7DE2092940E001BB091 /* ListMatchTableViewCell.swift in Sources */,
 				8CCD6681208976DE00A4D8CC /* Person.swift in Sources */,
+				30CF7DB8209BCEE10027809B /* TeamViewController.swift in Sources */,
 				8CCD6679208975C100A4D8CC /* Stadium.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

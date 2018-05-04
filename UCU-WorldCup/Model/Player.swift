@@ -9,10 +9,12 @@
 import Foundation
 
 class Player{
+    var name = ""
     var number = 0
     var team = ""
     
-    init(number: Int, team: String ){
+    init(name:String,number: Int, team: String ){
+        self.name = name
         self.number = number
         self.team = team
     }
