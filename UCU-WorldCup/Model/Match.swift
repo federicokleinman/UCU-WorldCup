@@ -21,13 +21,14 @@ class Match {
     var group: String
     var result: (Int, Int)?
     
-    init(team1: Team,team2: Team,stadium:Stadium,date: Date, group:String, event: [Event]){
+    init(team1: Team,team2: Team,stadium:Stadium,date: Date, group:String, event: [Event],result: (Int,Int)){
         self.team1 = team1
         self.team2 = team2
         self.stadium = stadium
         self.dateHour = date
         self.group = group
         self.event = event
+        self.result = result
     }
  
  

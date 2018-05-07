@@ -14,6 +14,12 @@ class ListMatchTableViewCell: UITableViewCell {
     @IBOutlet weak var nameTeam2: UILabel!
     @IBOutlet weak var emblemTeam1: UIImageView!
     @IBOutlet weak var emblemTeam2: UIImageView!
+    @IBOutlet weak var dateMatch: UILabel!
+    @IBOutlet weak var stadiumName: UILabel!
+    @IBOutlet weak var resultTeam1: UILabel!
+    @IBOutlet weak var resultTeam2: UILabel!
+    @IBOutlet weak var matchGroup: UILabel!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()

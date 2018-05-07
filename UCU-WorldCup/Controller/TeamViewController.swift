@@ -10,11 +10,8 @@ import UIKit
 
 class TeamViewController: UIViewController,UITableViewDelegate, UITableViewDataSource,UICollectionViewDelegate, UICollectionViewDataSource {
     
-    
-    
-    
-
     var teamSelected: Team!
+    var nextMatchesSelected: String!
     
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var emblem: UIImageView!
@@ -47,15 +44,27 @@ class TeamViewController: UIViewController,UITableViewDelegate, UITableViewDataS
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = self.playersTable.dequeueReusableCell(withIdentifier: "playerIdentifier") as! ListPlayerTableViewCell!
-        
-        let listPlayers = teamSelected.players[indexPath.row]
-        
-        let nameTeam = teamSelected.name
-        cell!.team.text = nameTeam
-        cell!.name.text = listPlayers.name
-        cell!.number.text = String(listPlayers.number)
-        return cell!
+        if (teamSelected.players[indexPath.row].isTechnical){
+            let cell = self.playersTable.dequeueReusableCell(withIdentifier: "technicalIdentifier") as! ListPlayerTableViewCell
+            
+            let listPlayers = teamSelected.players[indexPath.row]
+            
+            cell.nameTechnical.text = listPlayers.name
+            cell.position.text = listPlayers.number
+            return cell
+        }
+        else{
+            let cell = self.playersTable.dequeueReusableCell(withIdentifier: "playerIdentifier") as! ListPlayerTableViewCell
+            
+            let listPlayers = teamSelected.players[indexPath.row]
+            
+            let nameTeam = listPlayers.team
+            cell.team.text = nameTeam
+            cell.name.text = listPlayers.name
+            cell.number.text = listPlayers.number
+                return cell
+            
+        }
     }
     
     
@@ -74,13 +83,11 @@ class TeamViewController: UIViewController,UITableViewDelegate, UITableViewDataS
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = nextMatchesCollection.dequeueReusableCell(withReuseIdentifier:"nextMatchIdentifier" , for: indexPath) as! NextMatchesCollectionViewCell
+        let match = nextMatchesCollection.dequeueReusableCell(withReuseIdentifier:"nextMatchIdentifier" , for: indexPath) as! NextMatchesCollectionViewCell
+        match.stadium.text = "Samara"
+        match.teamName.text = nextMatchesSelected
+        match.date.text = "25/2"
         
-        
-            cell.stadium.text = "Samara"
-        cell.teamName.text = "Uruguay"
-        cell.date.text = "25/2"
-        
-        return cell
+        return match
     }
 }

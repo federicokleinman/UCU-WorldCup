@@ -14,11 +14,14 @@ class Team{
     var name = ""
     var emblem = ""
     var players: [Player] = []
+    var acronym = ""
     
-    init(name: String, emblem: String, players: [Player]){
+    init(name: String, emblem: String, players: [Player], acronym: String){
         self.name = name
         self.emblem = emblem
         self.players = players
+        self.acronym = acronym
+        
     }
     
     

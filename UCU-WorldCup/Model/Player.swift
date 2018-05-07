@@ -10,13 +10,14 @@ import Foundation
 
 class Player{
     var name = ""
-    var number = 0
+    var number = ""
     var team = ""
-    
-    init(name:String,number: Int, team: String ){
+    var isTechnical = false
+    init(name:String,number: String, team: String, isTechnical: Bool ){
         self.name = name
         self.number = number
         self.team = team
+        self.isTechnical = isTechnical
     }
     
 }
