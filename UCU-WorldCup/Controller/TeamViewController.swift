@@ -12,6 +12,7 @@ class TeamViewController: UIViewController,UITableViewDelegate, UITableViewDataS
     
     var teamSelected: Team!
     var nextMatchesSelected: String!
+    var matchSelected: Match!
     
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var emblem: UIImageView!
@@ -67,6 +68,12 @@ class TeamViewController: UIViewController,UITableViewDelegate, UITableViewDataS
         }
     }
     
+    func dateToString(date: Date) -> String{
+        let format = DateFormatter()
+        format.dateFormat = "dd/MM"
+        let stringDate = format.string(from: date)
+        return stringDate
+    }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 60.0
@@ -78,16 +85,34 @@ class TeamViewController: UIViewController,UITableViewDelegate, UITableViewDataS
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return teamSelected.nextMatches.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let match = nextMatchesCollection.dequeueReusableCell(withReuseIdentifier:"nextMatchIdentifier" , for: indexPath) as! NextMatchesCollectionViewCell
-        match.stadium.text = "Samara"
-        match.teamName.text = nextMatchesSelected
-        match.date.text = "25/2"
+        
+        match.teamName.text = teamSelected.nextMatches[indexPath.row].team2.name
+        match.stadium.text = teamSelected.nextMatches[indexPath.row].stadium.name
+        match.date.text = dateToString(date: teamSelected.nextMatches[indexPath.row].dateHour)
+        match.teamEmblem.image = UIImage(named: teamSelected.nextMatches[indexPath.row].team2.emblem)
+        
         
         return match
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let informationMatch = segue.destination as? InformationMatchViewController {
+            print(matchSelected.stadium.photo)
+            informationMatch.matchSelected = matchSelected
+        }
+        
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        matchSelected = teamSelected.nextMatches[indexPath.item]
+        performSegue(withIdentifier: "showNextMatch", sender: nil)
     }
 }

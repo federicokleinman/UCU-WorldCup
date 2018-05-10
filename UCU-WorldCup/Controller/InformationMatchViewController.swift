@@ -34,17 +34,14 @@ class InformationMatchViewController: UIViewController,UITableViewDelegate, UITa
         super.viewDidLoad()
         eventsTable.delegate = self
         eventsTable.dataSource = self
-        
-        
         stadiumPhoto.image = UIImage(named: matchSelected.stadium.photo)
         stadiumName.text = matchSelected.stadium.name
         teamEmblemOne.image = UIImage(named: matchSelected.team1.emblem)
         teamNameOne.text = matchSelected.team1.name
         teamEmblemTwo.image = UIImage(named: matchSelected.team2.emblem)
         teamNameTwo.text = matchSelected.team2.name
-        let formatter = DateFormatter()
-        let result = formatter.string(from: matchSelected.dateHour)
-        dateTimeMatch.text = result
+        let stringDate = dateToString(date: matchSelected.dateHour)
+        dateTimeMatch.text = stringDate
         matchName.text = "\(matchSelected.team1.acronym) V \(matchSelected.team2.acronym)"
         eventsTable.reloadData()
         
@@ -68,28 +65,35 @@ class InformationMatchViewController: UIViewController,UITableViewDelegate, UITa
         
     }
     
+    func dateToString(date: Date) -> String{
+        let format = DateFormatter()
+        format.dateFormat = "dd MMMM - HH:mm"
+        let stringDate = format.string(from: date)
+        return stringDate
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return matchSelected.event.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = self.eventsTable.dequeueReusableCell(withIdentifier: "eventsIdentifier") as! ListEventsTableViewCell!
+        let cell = self.eventsTable.dequeueReusableCell(withIdentifier: "eventsIdentifier") as! ListEventsTableViewCell
         let event = matchSelected.event[indexPath.row]
         
-        cell!.minute.text = String(event.minute)
+        cell.minute.text = String(event.minute)
         if event.local == true{
-            cell!.localEmoji.text = event.type
-            cell!.localTeam.text = event.description
-            cell!.aweyEmoji.text = ""
-            cell!.aweyTeam.text = ""
+            cell.localEmoji.text = event.type
+            cell.localTeam.text = event.description
+            cell.aweyEmoji.text = ""
+            cell.aweyTeam.text = ""
         }else{
-            cell!.localEmoji.text = ""
-            cell!.localTeam.text = ""
-            cell!.aweyEmoji.text = event.type
-            cell!.aweyTeam.text = event.description
+            cell.localEmoji.text = ""
+            cell.localTeam.text = ""
+            cell.aweyEmoji.text = event.type
+            cell.aweyTeam.text = event.description
         }
         
-        return cell!
+        return cell
     }
     
     
